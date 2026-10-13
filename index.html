@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>働き方｜まとめノート</title>
+<meta name="description" content="仕事は人生の中心ではなく、暮らしの一部。振り回されずに自分の意思で働くこと、自分の言葉で働くこと、努力を努力にしないこと、休むこと、AIと働くことをまとめた個人的なノート。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f6f5f1;--surface:#fff;--ink:#24231f;--muted:#66625a;--faint:#9d988e;--line:#e3dfd6;--accent:#3f6f86;--wash:#ebeef0}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131516;--surface:#1b1e20;--ink:#e9eae6;--muted:#a9aca6;--faint:#6b6f6b;--line:#2b2f31;--accent:#8fbdd2;--wash:#1c2328}}
+  :root[data-theme="dark"]{--bg:#131516;--surface:#1b1e20;--ink:#e9eae6;--muted:#a9aca6;--faint:#6b6f6b;--line:#2b2f31;--accent:#8fbdd2;--wash:#1c2328}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.95 "Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:44rem;margin:auto;padding:0 16px} @media(min-width:640px){.wrap{padding:0 24px}}
+  a{color:inherit}
+  .top{padding-top:24px}
+  .back{font-size:.75rem;color:var(--muted);text-decoration:none}.back:hover{color:var(--ink)}
+
+  header{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{margin:0 0 16px;font-size:.7rem;letter-spacing:.24em;color:var(--accent);font-weight:700}
+  h1{font:600 clamp(2rem,5.6vw,3rem)/1.45 "Noto Serif JP",serif;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1.05rem,2.6vw,1.4rem);line-height:1.75;margin:.1em 0 1.1em;opacity:.85}
+  .lead{margin:0;max-width:34em;color:var(--muted)}
+  .toc{display:flex;flex-wrap:wrap;gap:6px 16px;margin:24px 0 0;padding:0;list-style:none;font-size:.82rem}
+  .toc a{color:var(--accent);text-decoration:none}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .sec-n{display:block;font-size:.7rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:6px}
+  h2{font:600 1.5rem/1.5 "Noto Serif JP",serif;margin:0 0 16px;letter-spacing:.03em}
+  h3{font:600 1.08rem/1.6 "Noto Serif JP",serif;margin:28px 0 10px}
+  p{margin:0 0 16px}
+  .pull{margin:22px 0;padding:4px 0 4px 18px;border-left:2px solid var(--accent);font:500 1.12rem/1.8 "Noto Serif JP",serif}
+
+  ul.points{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+  ul.points li{padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:4px;font-size:.94rem}
+  ul.points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:2px}
+  ul.points span{color:var(--muted)}
+
+  .pair{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0}
+  @media(min-width:640px){.pair{grid-template-columns:1fr 1fr}}
+  .pair div{padding:16px 18px;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+  .pair h4{margin:0 0 4px;font-size:.72rem;letter-spacing:.16em;color:var(--accent)}
+  .pair p{margin:0;font-size:.92rem;color:var(--muted)}
+
+  .note{padding:26px;background:var(--wash);border-radius:4px}
+  .note h2{font-size:1.24rem}
+  .note ul{margin:12px 0 0;padding-left:1.2em}
+  .note li{margin:0 0 9px}
+
+  .src{border-top:1px solid var(--line);margin-top:16px}
+  .src a{display:flex;justify-content:space-between;gap:14px;padding:10px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-size:.92rem}
+  .src a:hover{color:var(--accent)}
+  .src small{color:var(--faint);font-size:.76rem;white-space:nowrap}
+
+  footer{padding:34px 0 60px;color:var(--faint);font-size:.76rem}
+  footer .related{color:var(--muted);font-size:.86rem;margin-bottom:16px}
+  footer .related a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top"><a class="back" href="../">← m-note トップ</a></div>
+  <header>
+    <p class="kicker">WAY OF WORKING</p>
+    <h1>働き方</h1>
+    <p class="mn-tagline">仕事は人生の中心ではなく、暮らしの一部。</p>
+    <p class="lead">仕事にも楽しさはある。けれど、働くことそのものが目的ではない。自由な暮らしと安心を支えながら、振り回されず、自分の言葉で、楽しんで働く。そのための考え方をまとめたノートです。</p>
+    <ul class="toc">
+      <li><a href="#place">仕事の位置づけ</a></li>
+      <li><a href="#freedom">振り回されない</a></li>
+      <li><a href="#words">自分の言葉で働く</a></li>
+      <li><a href="#enjoy">努力を努力にしない</a></li>
+      <li><a href="#rest">休むことも仕事のうち</a></li>
+      <li><a href="#ai">AIと働く</a></li>
+      <li><a href="#open">まだ確かめていること</a></li>
+    </ul>
+  </header>
+
+  <section id="place">
+    <span class="sec-n">01</span>
+    <h2>仕事の位置づけ</h2>
+    <p class="pull">働くのは、自由な暮らしと安心のため。</p>
+    <p><a href="../way-of-life/">生き方</a>で決めたのは、自分の意思で自由に生き、世界を知る楽しさと豊かな体験を味わうこと。仕事とお金は、その暮らしを支える手段です。お金を増やすことが目的にすり替わることは望まない。</p>
+    <p>将来は働く時間を減らし、<strong>週3日ほどの勤務で、今と同じくらいの暮らし</strong>を保ちたい。働く時間を減らすこと自体が目的ではなく、自由な時間の中で、大切にしたいことを楽しめる状態がほしい。</p>
+  </section>
+
+  <section id="freedom">
+    <span class="sec-n">02</span>
+    <h2>振り回されない</h2>
+    <p class="pull">求めている自由は、時間やお金だけでなく、仕事や周りに振り回されない心の自由。</p>
+    <p>職場では、相手の思惑に心を乱される場面もある。そのとき、相手が何を考えているかと、自分がどうするかを分けて考える。相手の目的は、自分にはコントロールできない。</p>
+    <ul class="points">
+      <li><b>他人の評価を、目的にしない</b><span>評価は自分の行動を決める唯一の基準ではない。誰にも褒められなくても、やりたいことは変わらない。</span></li>
+      <li><b>自分の目的に戻る</b><span>衝突が起きても、自分は何のためにここにいるのかを確かめ直す。目的は一度決めて終わりではなく、問い直していくもの。</span></li>
+      <li><b>心で分けて、現実には動く</b><span>課題の分離は、無抵抗になることではない。事実と解釈を分け、相手を責めるのではなく自分の考えとして伝える。必要なら距離をとり、必要な手続きを使う。</span></li>
+    </ul>
+  </section>
+
+  <section id="words">
+    <span class="sec-n">03</span>
+    <h2>自分の言葉で働く</h2>
+    <p class="pull">「やらなければ」ではなく「やりたい」。「正しいことを言わなければ」ではなく「自分はこう思う」。</p>
+    <p>目の前のことを自然に「やりたい」と思えているとき、そして全部を自分の言葉で話しているとき、いちばん深く没頭できる。自分と仕事の境界が少し薄くなり、行為そのものが自然に起きているような状態になる。</p>
+    <p>反対に、本当はこう思っているのに、立場上は別のことを言う。そのずれが大きいほど、自分らしさから離れていく。「こうあるべき」をそのまま受け取らず、一度自分の中で問い直し、納得できたものを自分で選ぶ。</p>
+  </section>
+
+  <section id="enjoy">
+    <span class="sec-n">04</span>
+    <h2>努力を努力にしない</h2>
+    <p class="pull">いくら悩んでも、それ自体には何のメリットもない。だったら、いかに楽しむかが勝負。</p>
+    <p>自分には「努力している」という感覚があまりない。大変なことに出会ったら、「これはどう攻略しようか」と捉え直す。困難をなくすのではなく、意味づけを変える。楽しみながら取り組んだほうが、我慢して続けるより新しい発想も出やすい。</p>
+    <p>困難にぶつかったときは、三つ自分に問う。</p>
+    <ul class="points">
+      <li><b>これは本当にやるべきことか</b><span>やらなくていいことなら、やめる。</span></li>
+      <li><b>どうすればもっと楽しくできるか</b><span>やり方や順番を変えるだけで、同じ仕事の感じ方が変わる。</span></li>
+      <li><b>今回の攻略条件は何か</b><span>少し俯瞰して、「いまこういうゲームをしているんだ」と見る。</span></li>
+    </ul>
+    <p style="margin-top:16px">楽しむことは、楽をすることではない。不必要な苦痛を減らし、つらくなると分かっていることには先に備える。今を楽しむことと、未来を考えることは両立します。</p>
+  </section>
+
+  <section id="rest">
+    <span class="sec-n">05</span>
+    <h2>休むことも仕事のうち</h2>
+    <p>一日中画面に向かって集中すると、目の疲れが首や肩までつながってくる。忙しい日ほど、30分に一度でも立ち上がり、少し体を動かす。休むことは仕事の中断ではなく、次の時間も自分を使える状態でいるための準備です。</p>
+    <p>きつい登山をした週末明けの月曜、仕事はむしろ苦にならず、頭がすっきりしていた。働く時間の外で心と体を整えることが、働く時間の質も変えるのかもしれない。整え方は<a href="../health-habits/">健康と習慣</a>にまとめています。</p>
+  </section>
+
+  <section id="ai">
+    <span class="sec-n">06</span>
+    <h2>AIと働く</h2>
+    <p class="pull">AIを使える人ではなく、AIで仕事そのものを変えられる人へ。</p>
+    <p>AIが仕事に入り込むほど、「AIを使える」だけでは足りなくなる。いまの仕事を理解し、何をどういう仕組みにすれば良くなるのかを設計できること。自分で全部を作れなくても、作るべきものを描けることの価値が高まっていく。</p>
+    <div class="pair">
+      <div><h4>道具の選び方</h4><p>いちばん性能の高いAIではなく、自分の用途に合うAIを選ぶ。まず一つをメインにして、必要になったら足す。増やすより、役割を明確にする。</p></div>
+      <div><h4>人に残ること</h4><p>知識はAIが担う。人に残るのは、相手を理解すること、問題を立てること、そして決めること。価値は、こちらが差し出したものではなく、相手に起きた変化で決まる。</p></div>
+    </div>
+  </section>
+
+  <section id="open">
+    <div class="note">
+      <h2>このノートで、まだ確かめていること</h2>
+      <ul>
+        <li>仕事の中で、精神的な自由を保つにはどうすればいいか</li>
+        <li>仕事や人間関係に、どんな境界線を引けば自分の意思を保ちやすいか</li>
+        <li>経済的な安心を損なわずに、週3日ほどの働き方をどう実現するか</li>
+        <li>日々の仕事の中の「小さな自己実現」とは、具体的に何をすることなのか</li>
+        <li>AIが仕事に入り込む中で、自分は何を担い、何を手放すのか</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <h2 style="font-size:1.2rem">このノートの元になったつぶやき</h2>
+    <nav class="src">
+      <a href="../musings/posts/p148.html">振り回されず、自分の意思で<small>2026.10.12</small></a>
+      <a href="../musings/posts/p128.html">相手ではなく、自分の目的に戻る<small>2026.09.20</small></a>
+      <a href="../musings/posts/p109.html">自分の判断と、自分の言葉で<small>2026.09.04</small></a>
+      <a href="../musings/posts/p091.html">休むことも、仕事のうち<small>2026.08.26</small></a>
+      <a href="../musings/posts/p088.html">どの仕事をどのAIに任せるか<small>2026.08.25</small></a>
+      <a href="../musings/posts/p081.html">いかに楽しむかが勝負<small>2026.08.24</small></a>
+      <a href="../musings/posts/p075.html">使える人ではなく、変えられる人<small>2026.08.19</small></a>
+      <a href="../musings/posts/p042.html">価値は、相手に起きた変化のこと<small>2026.07.28</small></a>
+    </nav>
+  </section>
+
+  <footer>
+    <p class="related">あわせて読む：<a href="../way-of-life/">生き方</a> ・ <a href="../joy/">楽しみ方</a> ・ <a href="../health-habits/">健康と習慣</a> ・ <a href="../thinking/">考え方</a></p>
+    <p>専門家ではない個人が、自分の考えを書きとめたノートです。勤め先や特定の組織の考えを表すものではありません。</p>
+    <p><a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</main>
+</body>
+</html>
